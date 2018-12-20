@@ -9,8 +9,9 @@ RUN apk add --no-cache --virtual=.build-deps bash
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN apk add --no-cache \
+        gettext=0.19.8.1-r2 \
         openssh-client=7.7_p1-r3 \
-        openssl=1.0.2p-r0
+        openssl=1.0.2q-r0
 
 RUN mkdir -p ~/.ssh
 
