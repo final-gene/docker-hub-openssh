@@ -11,6 +11,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN apk add --no-cache \
         ca-certificates=20171114-r3 \
         gettext=0.19.8.1-r2 \
+        git=2.18.1-r0 \
         openssh-client=7.7_p1-r3 \
         openssl=1.0.2q-r0
 
