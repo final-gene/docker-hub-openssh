@@ -4,7 +4,7 @@ LABEL maintainer="frank.giesecke@final-gene.de"
 
 ENV OPENSSH_VERSION 0.0.0
 
-RUN apk add --no-cache --virtual=.build-deps bash
+RUN apk add --no-cache bash
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
@@ -21,8 +21,6 @@ RUN { \
     echo "Host *"; \
     echo "    StrictHostKeyChecking no"; \
 } > ~/.ssh/config
-
-RUN apk del .build-deps
 
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
