@@ -9,9 +9,6 @@ Strict host key checking is disabled.
 You can use environment variable SSH_DEPLOY_KEY for your private key.
 It will create ssh agent with your ssh key.
 
-## Supported tags and respective Dockerfile links
--   `latest` [(Dockerfile)](https://github.com/finalgene/docker-hub-openssh/blob/master/Dockerfile)
-
 ## How to use this image
 Run the `openssh` image:
 

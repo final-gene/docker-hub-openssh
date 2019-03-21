@@ -1,19 +1,17 @@
-FROM alpine:3.8
+FROM alpine:3.9
 
 LABEL maintainer="frank.giesecke@final-gene.de"
 
-ENV OPENSSH_VERSION 0.0.0
-
-RUN apk add --no-cache bash
+RUN apk add --no-cache bash=4.4.19-r1
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN apk add --no-cache \
-        ca-certificates=20171114-r3 \
-        gettext=0.19.8.1-r2 \
-        git=2.18.1-r0 \
-        openssh-client=7.7_p1-r3 \
-        openssl=1.0.2q-r0
+        ca-certificates=20190108-r0 \
+        gettext=0.19.8.1-r4 \
+        git=2.20.1-r0 \
+        openssh-client=7.9_p1-r4 \
+        openssl=1.1.1b-r1
 
 RUN mkdir -p ~/.ssh
 
