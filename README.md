@@ -6,8 +6,10 @@ openssl tools.
 
 Strict host key checking is disabled.
 
-You can use environment variable SSH_DEPLOY_KEY for your private key.
+You can use environment variable `SSH_DEPLOY_KEY` for your private key.
 It will create ssh agent with your ssh key.
+
+To avoid the usage of the ssh agent set the variable `DISABLE_AGENT` to `1`
 
 ## How to use this image
 Run the `openssh` image:

@@ -1,5 +1,7 @@
 NAME = openssh
 
+default: lint build
+
 .PHONY: lint
 lint:
 	@docker run --rm --volume "$(shell pwd)":/lint/input zemanlx/remark-lint --frail .
