@@ -10,6 +10,4 @@ if [ ! -z "${SSH_DEPLOY_KEY}" ]; then
     fi
 fi
 
-$@
-
-rm -f /root/.ssh/id_rsa
+exec "$@; rm -f /root/.ssh/id_rsa"
