@@ -2,16 +2,18 @@ FROM alpine:3.11
 
 LABEL maintainer="frank.giesecke@final-gene.de"
 
-RUN apk add --no-cache bash=5.0.11-r1
+# hadolint ignore=DL3018
+RUN apk add --no-cache bash
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
+# hadolint ignore=DL3018
 RUN apk add --no-cache \
-        ca-certificates=20191127-r1 \
-        gettext=0.20.1-r2 \
-        git=2.24.1-r0 \
-        openssh-client=8.1_p1-r0 \
-        openssl=1.1.1d-r3
+        ca-certificates \
+        gettext \
+        git \
+        openssh-client \
+        openssl
 
 RUN mkdir -p ~/.ssh
 
