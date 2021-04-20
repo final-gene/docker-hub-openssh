@@ -1,4 +1,4 @@
-FROM alpine:3.11
+FROM alpine:3.13
 
 LABEL maintainer="frank.giesecke@final-gene.de"
 
@@ -13,16 +13,13 @@ RUN apk add --no-cache \
         gettext \
         git \
         openssh-client \
-        openssl
-
-RUN mkdir -p ~/.ssh
-
-RUN { \
-    echo "Host *"; \
-    echo "    StrictHostKeyChecking no"; \
-} > ~/.ssh/config
-
-RUN chmod -R u=rwX,g=,o= /root/.ssh
+        openssl \
+    && mkdir -p ~/.ssh \
+    && { \
+        echo "Host *"; \
+        echo "    StrictHostKeyChecking no"; \
+    } > ~/.ssh/config \
+    && chmod -R u=rwX,g=,o= /root/.ssh
 
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
