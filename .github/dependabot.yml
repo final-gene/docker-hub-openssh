@@ -1,7 +1,15 @@
 version: 2
 updates:
-  # Maintain dependencies for GitHub Actions
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: daily
+    reviewers:
+      - FrankGiesecke
+
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: daily
+    reviewers:
+      - FrankGiesecke
