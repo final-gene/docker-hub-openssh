@@ -32,6 +32,14 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: ${{ env.DOCKER_IMAGE_NAME }}
+          tags: |
+            type=match,pattern=\d+
+            type=match,pattern=\d+.\d+
+            type=match,pattern=\d+.\d+.\d+
+            type=match,pattern=\d+.\d+.\d+-.+
+            type=raw,value=latest
+          labels: |
+            org.opencontainers.image.vendor=${{ github.repository_owner }}
 
       - name: Login to DockerHub
         uses: docker/login-action@v2
