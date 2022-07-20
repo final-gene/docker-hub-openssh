@@ -1,6 +1,6 @@
 # OpenSSH & OpenSSL
 
-[![CircleCI](https://circleci.com/gh/final-gene/docker-hub-openssh/tree/master.svg?style=svg)](https://circleci.com/gh/final-gene/docker-hub-openssh/tree/master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/97b6d0ee6e964d409a0471e789996fa2)](https://www.codacy.com/app/final-gene/docker-hub-openssh?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=final-gene/docker-hub-openssh&amp;utm_campaign=Badge_Grade)
+[![Docker build and publish](https://github.com/final-gene/docker-hub-openssh/actions/workflows/publish.yml/badge.svg)](https://github.com/final-gene/docker-hub-openssh/actions/workflows/publish.yml)
 
 Docker image based on alpine linux with installed openssh client and
 openssl tools.
