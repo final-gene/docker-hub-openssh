@@ -23,6 +23,6 @@ jobs:
 
       - name: Test build
         id: build
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v4
         with:
           cache-from: type=registry,ref=${{ env.DOCKER_IMAGE_NAME }}:latest
