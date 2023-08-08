@@ -1,4 +1,4 @@
-FROM alpine:3.18.2
+FROM alpine:3.18.3
 
 LABEL maintainer="frank.giesecke@final-gene.de"
 
